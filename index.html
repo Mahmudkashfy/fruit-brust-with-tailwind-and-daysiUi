@@ -20,14 +20,13 @@
     <style>
         * {transition: all linear 0.4s;}
         .banner_img::after {content: '';position: absolute;width: 100%;height: 100%;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.70);z-index: -10;}
-        .banner_overlay {top: 45%;left: 50%;transform: translate(-50%, -50%);}
     </style>
 </head>
 <body>
     <header class="max-w-screen-xl mx-auto px-2 md:px-12 lg:px24">
         <!--============== Navigation section starts here ==============-->
-        <nav class="hidden flex justify-between items-center bg-[#F85559] py-5 px-5 rounded-full">
-            <ul class="show flex gap-5 text-white text-lg font-medium ">
+        <nav class="flex justify-between items-center bg-[#F85559] py-5 px-5 rounded-full">
+            <ul class="flex gap-5 text-white text-lg font-medium ">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Shop</a></li>
@@ -37,7 +36,7 @@
                 <img class="w-1/6" src="./images/logo.png" alt="logo">
                 <h3 class="text-white text-4xl font-bold">Fruit Burst</h3>
             </div>
-            <div class=" form-control w-96 relative">
+            <div class="form-control w-96 relative">
                 <input type="text" placeholder="Search here" class="input focus:outline-none rounded-full " />
                 <i class="far fa-search text-gray-400 absolute top-3 right-3 text-2xl"></i>
             </div>
@@ -110,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="banner_overlay absolute text-center space-y-2 md:space-y-8">
+            <div class="absolute text-center space-y-2 md:space-y-8" style="top: 45%;left: 50%;transform: translate(-50%, -50%);">
                 <h1 class="text-2xl md:text-6xl font-extrabold text-white">
                     Exotic tastes at your
                     <br>
@@ -119,15 +118,15 @@
                 <p class="text-white opacity-80 ">
                     We supply highly quality organic products
                 </p>
-                <button class="text-xl font-extrabold text-white bg-[#F85559] py-3 px-5 rounded-lg cursor-pointer">Shop
+                <button class="text-xl font-extrabold text-white bg-[#F85559] py-3 px-5 rounded-lg hover:bg-opacity-80 cursor-pointer">Shop
                     Now</button>
             </div>
         </section>
         <!--============== Banner section ends here ==============-->
     </header>
-    <main>
+    <main class="max-w-screen-xl mx-auto px-2 md:px-12 lg:px24">
         <!--============== Deal of day section starts here ==============-->
-        <section class="max-w-screen-xl mx-auto px-2 md:px-12 lg:px24 pt-24 ">
+        <section class="pt-24"">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left">
                     <h2 class="text-5xl font-extrabold">Deal of the day</h2>
@@ -197,7 +196,7 @@
                                 fill="#FBC0A8" />
                         </svg>
                     </div>
-                    <button class="text-lg">Details</button>
+                    <button onclick="my_modal_1.showModal()">Details</button>
                 </div>
                 <!-- secend card -->
                 <div class="flex flex-col justify-center items-center space-y-3 py-12 px-10 border rounded-md">
@@ -227,7 +226,7 @@
                                 fill="#FBC0A8" />
                         </svg>
                     </div>
-                    <button class="text-lg">Details</button>
+                    <button onclick="my_modal_1.showModal()">Details</button>
                 </div>
                 <!-- third card -->
                 <div class="flex flex-col justify-center items-center space-y-3 py-12 px-10 border rounded-md">
@@ -257,7 +256,7 @@
                                 fill="#FBC0A8" />
                         </svg>
                     </div>
-                    <button class="text-lg">Details</button>
+                    <button onclick="my_modal_1.showModal()">Details</button>
                 </div>
                 <!-- fourth card -->
                 <div class="flex flex-col justify-center items-center space-y-3 py-12 px-10 border rounded-md">
@@ -287,12 +286,60 @@
                                 fill="#FBC0A8" />
                         </svg>
                     </div>
-                    <button class="text-lg">Details</button>
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button onclick="my_modal_1.showModal()">Details</button>
+                    <dialog id="my_modal_1" class="modal">
+                        <form method="dialog" class="modal-box">
+                            <div class="flex flex-col justify-center items-center space-y-3   ">
+                                <img src="./images/fruit8.png" alt="fruit6">
+                                <h2 class="text-2xl font-bold">Red Dragon</h2>
+                                <p class="text-red-500 text-center">Professional employees are there for you to pick the
+                                    most amazing and fresh fruits.</p>
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="160" height="24" viewBox="0 0 160 24"
+                                        fill="none">
+                                        <path
+                                            d="M45.8527 0L50.4015 7.00591L58.4702 9.16716L53.2129 15.6584L53.6507 24L45.8527 21.0059L38.0546 24L38.4925 15.6584L33.2351 9.16716L41.3038 7.00591L45.8527 0Z"
+                                            fill="#F85559" />
+                                        <path
+                                            d="M45.9037 0L50.4526 7.00591L58.5213 9.16716L53.264 15.6584L53.7018 24L45.9037 21.0059V0Z"
+                                            fill="#FBC0A8" />
+                                        <path
+                                            d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z"
+                                            fill="#F85559" />
+                                        <path
+                                            d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z"
+                                            fill="#FBC0A8" />
+                                        <path
+                                            d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z"
+                                            fill="#FBC0A8" />
+                                        <path
+                                            d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z"
+                                            fill="#FBC0A8" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex justify-center gap-5 modal-action">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn text-base font-medium px-3 rounded-md">Close</button>
+                                <button
+                                    class="bg-red-500 text-base font-medium px-3 rounded-md text-white hover:bg-opacity-80">Buy
+                                    Now</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </div>
             </div>
         </section>
         <!--============== Deal of day section ends here ==============-->
+
+        <!--============== Teem section starts here ==============-->
+        <section class="mt-24" style="background-image: url('./images/banner1.png'); width: 100%; height: 100%;">
+           
+        </section>
+        <!--============== Teem section ends here ==============-->
     </main>
-    <footer></footer>
+    <footer >
+    </footer>
 </body>
 </html>
