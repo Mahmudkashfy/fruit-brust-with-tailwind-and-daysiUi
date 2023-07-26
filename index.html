@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width, initial-scale=1.0">
@@ -18,10 +19,33 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {transition: all linear 0.4s;}
-        .banner_img::after {content: '';position: absolute;width: 100%;height: 100%;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.70);z-index: -10;}
+        * {
+            transition: all linear 0.4s;
+        }
+
+        .teem_overlay::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.70);
+        }
+
+        .banner_img::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.70);
+            z-index: -10;
+        }
     </style>
 </head>
+
 <body>
     <header class="max-w-screen-xl mx-auto px-2 md:px-12 lg:px24">
         <!--============== Navigation section starts here ==============-->
@@ -33,7 +57,7 @@
                 <li><a href="#">All Fruits</a></li>
             </ul>
             <div class="flex justify-center items-center gap-2 ">
-                <img class="w-1/6" src="./images/logo.png" alt="logo">
+                <img class="w-10" src="./images/logo.png" alt="logo">
                 <h3 class="text-white text-4xl font-bold">Fruit Burst</h3>
             </div>
             <div class="form-control w-96 relative">
@@ -42,7 +66,8 @@
             </div>
         </nav>
         <!--============== Navigation section ends here ==============-->
-
+    </header>
+    <main class="max-w-screen-xl mx-auto px-2 md:px-12 lg:px24">
         <!--============== Banner section starts here ==============-->
         <section class="relative pt-16">
             <div class="carousel w-full">
@@ -109,7 +134,8 @@
                     </div>
                 </div>
             </div>
-            <div class="absolute text-center space-y-2 md:space-y-8" style="top: 45%;left: 50%;transform: translate(-50%, -50%);">
+            <div class="absolute text-center space-y-2 md:space-y-8"
+                style="top: 45%;left: 50%;transform: translate(-50%, -50%);">
                 <h1 class="text-2xl md:text-6xl font-extrabold text-white">
                     Exotic tastes at your
                     <br>
@@ -118,54 +144,54 @@
                 <p class="text-white opacity-80 ">
                     We supply highly quality organic products
                 </p>
-                <button class="text-xl font-extrabold text-white bg-[#F85559] py-3 px-5 rounded-lg hover:bg-opacity-80 cursor-pointer">Shop
+                <button
+                    class="text-xl font-extrabold text-white bg-[#F85559] py-3 px-5 rounded-lg hover:bg-opacity-80 cursor-pointer">Shop
                     Now</button>
             </div>
         </section>
         <!--============== Banner section ends here ==============-->
-    </header>
-    <main class="max-w-screen-xl mx-auto px-2 md:px-12 lg:px24">
+
         <!--============== Deal of day section starts here ==============-->
         <section class="pt-24"">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-center md:text-left">
-                    <h2 class="text-5xl font-extrabold">Deal of the day</h2>
-                    <p class="pt-6">Contrary to popular belief, is not simply random text. It has roots in a piece of
-                        classical
-                        <br>
-                        Latin literature from 45 BC, making it over 2000 years old.</p>
-                </div>
-                <div class="flex justify-end">
-                    <div class="grid grid-flow-col gap-5 text-center auto-cols-max items-start">
-                        <div class="flex flex-col">
-                            <span class="countdown font-mono text-5xl">
-                                <span style="--value:15;"></span>
-                            </span>
-                            days
-                        </div>
-                        <p class="text-3xl pt-2">:</p>
-                        <div class="flex flex-col">
-                            <span class="countdown font-mono text-5xl">
-                                <span style="--value:10;"></span>
-                            </span>
-                            hours
-                        </div>
-                        <p class="text-3xl pt-2">:</p>
-                        <div class="flex flex-col">
-                            <span class="countdown font-mono text-5xl">
-                                <span style="--value:24;"></span>
-                            </span>
-                            min
-                        </div>
-                        <p class="text-3xl pt-2">:</p>
-                        <div class="flex flex-col">
-                            <span class="countdown font-mono text-5xl">
-                                <span style="--value:52;"></span>
-                            </span>
-                            sec
-                        </div>
+            <div class=" flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left">
+                <h2 class="text-5xl font-extrabold">Deal of the day</h2>
+                <p class="pt-6">Contrary to popular belief, is not simply random text. It has roots in a piece of
+                    classical
+                    <br>
+                    Latin literature from 45 BC, making it over 2000 years old.</p>
+            </div>
+            <div class="flex justify-end">
+                <div class="grid grid-flow-col gap-5 text-center auto-cols-max items-start">
+                    <div class="flex flex-col">
+                        <span class="countdown font-mono text-5xl">
+                            <span style="--value:15;"></span>
+                        </span>
+                        days
+                    </div>
+                    <p class="text-3xl pt-2">:</p>
+                    <div class="flex flex-col">
+                        <span class="countdown font-mono text-5xl">
+                            <span style="--value:10;"></span>
+                        </span>
+                        hours
+                    </div>
+                    <p class="text-3xl pt-2">:</p>
+                    <div class="flex flex-col">
+                        <span class="countdown font-mono text-5xl">
+                            <span style="--value:24;"></span>
+                        </span>
+                        min
+                    </div>
+                    <p class="text-3xl pt-2">:</p>
+                    <div class="flex flex-col">
+                        <span class="countdown font-mono text-5xl">
+                            <span style="--value:52;"></span>
+                        </span>
+                        sec
                     </div>
                 </div>
+            </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-6">
                 <!-- frist card -->
@@ -334,12 +360,116 @@
         <!--============== Deal of day section ends here ==============-->
 
         <!--============== Teem section starts here ==============-->
-        <section class="mt-24" style="background-image: url('./images/banner1.png'); width: 100%; height: 100%;">
-           
+        <section class="mt-24 relative teem_overlay"
+            style="background-image: url('./images/banner1.png'); width: 100%; height: 100%;">
+            <div class="text-center text-white py-20">
+                <h2 class="text-5xl font-extrabold">Meet the team section</h2>
+                <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+                    <br>
+                    Latin
+                    literature from 45 BC, making it over 2000 years old.</p>
+                <div class="grid grid-cols-1 md:grid-cols-4 justify-around pt-12">
+                    <div class="flex justify-center items-center flex-col">
+                        <img class="w-2/4" src="./images/member1.png" alt="member-1">
+                        <h3 class="text-2xl font-bold">Awlad Hossain</h3>
+                        <p>Fruits Expert</p>
+                        <div class="flex gap-5">
+                            <a href="#">
+                                <i class="fab fa-facebook text-green-500"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter text-green-500"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-linkedin-in text-green-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center flex-col">
+                        <img class="w-2/4" src="./images/member2.png" alt="member-1">
+                        <h3 class="text-2xl font-bold">Awlad Hossain</h3>
+                        <p>Fruits Expert</p>
+                        <div class="flex gap-5">
+                            <a href="#">
+                                <i class="fab fa-facebook text-green-500"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter text-green-500"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-linkedin-in text-green-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center flex-col">
+                        <img class="w-2/4" src="./images/member3.png" alt="member-1">
+                        <h3 class="text-2xl font-bold">Awlad Hossain</h3>
+                        <p>Fruits Expert</p>
+                        <div class="flex gap-5">
+                            <a href="#">
+                                <i class="fab fa-facebook text-green-500"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter text-green-500"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-linkedin-in text-green-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center flex-col">
+                        <img class="w-2/4" src="./images/member4.png" alt="member-1">
+                        <h3 class="text-2xl font-bold">Awlad Hossain</h3>
+                        <p>Fruits Expert</p>
+                        <div class="flex gap-5">
+                            <a href="#">
+                                <i class="fab fa-facebook text-green-500"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter text-green-500"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-linkedin-in text-green-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!--============== Teem section ends here ==============-->
     </main>
-    <footer >
+    <footer
+        class="flex flex-col max-w-screen-xl mx-auto px-2 md:px-12 lg:px24 bg-[#121212] py-20 mt-24 text-center space-y-10">
+        <div class="flex justify-center items-center gap-2 ">
+            <img class="w-10" src="./images/logo.png" alt="logo">
+            <h3 class="text-white text-4xl font-bold">Fruit Burst</h3>
+        </div>
+        <div class="flex flex-wrap gap-12 justify-center text-white">
+            <a class="hover:opacity-50" href="#">Home</a>
+            <a class="hover:opacity-50" href="#">About</a>
+            <a class="hover:opacity-50" href="#">Shop</a>
+            <a class="hover:opacity-50" href="#">All Fruits</a>
+            <a class="hover:opacity-50" href="#">Support</a>
+            <a class="hover:opacity-50" href="#">My Account</a>
+        </div>
+        <div class="flex justify-center gap-5">
+            <a href="#">
+                <i class="fab fa-facebook text-white hover:opacity-50 text-2xl"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter text-white hover:opacity-50 text-2xl"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-linkedin-in text-white hover:opacity-50 text-2xl"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-behance text-white hover:opacity-50 text-2xl"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram text-white hover:opacity-50 text-2xl"></i>
+            </a>
+        </div>
     </footer>
 </body>
+
 </html>
