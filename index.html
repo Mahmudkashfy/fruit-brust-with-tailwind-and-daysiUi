@@ -1,11 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width, initial-scale=1.0">
     <title>fruit-brust with tailwind and daysi Ui</title>
+
+    <!--============== Lato font from google fonts ==============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!--============== Font awesome 5 pro ==============-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!--============== Link with tailwind and daysi UI ==============-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            transition: all linear 0.4s;
+        }
+        .banner_img::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.70);
+            z-index: -10;
+        }
+        .banner_overlay{
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header class="max-w-screen-xl mx-auto px-2 md:px-12 lg:px24">
+        <!--============== Navigation section starts here ==============-->
+        <nav class=" flex justify-between items-center bg-[#F85559] py-5 px-5 rounded-full">
+            <ul class="show flex gap-5 text-white text-lg font-medium ">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">All Fruits</a></li>
+            </ul>
+            <div class="flex justify-center items-center gap-2 ">
+                <img class="w-1/6" src="./images/logo.png" alt="logo">
+                <h3 class="text-white text-4xl font-bold">Fruit Burst</h3>
+            </div>
+            <div class=" form-control w-96 relative">
+                <input type="text" placeholder="Search here" class="input focus:outline-none rounded-full " />
+                <i class="far fa-search text-gray-400 absolute top-3 right-3 text-2xl"></i>
+            </div>
+        </nav>
+        <!--============== Navigation section ends here ==============-->
+
+        <!--============== Banner section starts here ==============-->
+        <section class="relative pt-16">
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full  banner_img">
+                    <img src="./images/banner1.png" class="w-full -z-10 " />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10">
+                        <a href="#slide4" class="btn btn-circle bg-black border-none text-white hover:text-black">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-black border-none text-white hover:text-black">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full banner_img">
+                    <img src="./images/banner2.png" class="w-full -z-10 " />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10">
+                        <a href="#slide1" class="btn btn-circle bg-black border-none text-white hover:text-black">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-black border-none text-white hover:text-black">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full banner_img">
+                    <img src="./images/banner3.png" class="w-full -z-10 " />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10">
+                        <a href="#slide2" class="btn btn-circle bg-black border-none text-white hover:text-black">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-black border-none text-white hover:text-black">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full banner_img">
+                    <img src="./images/banner4.png" class="w-full -z-10 " />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10">
+                        <a href="#slide3" class="btn btn-circle bg-black border-none text-white hover:text-black">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-black border-none text-white hover:text-black">❯</a>
+                    </div>
+                </div>
+            </div>
+            <!-- banner extra -->
+            <div class="invisible md:visible z-50 -mt-20 flex justify-between w-4/5 mx-auto bg-white rounded-lg shadow-xl p-5">
+                <div>
+                    <img src="./images/fruit1.png" alt="fruit-img-1">
+                    <div class="flex justify-center">
+                        <h2 class="text-xl font-medium">Grapes</h2>
+                    </div>
+                </div>
+                <div>
+                    <img src="./images/fruit2.png" alt="fruit-img-1">
+                    <div class="flex justify-center">
+                        <h2 class="text-xl font-medium">Orange</h2>
+                    </div>
+                </div>
+                <div>
+                    <img src="./images/fruit3.png" alt="fruit-img-1">
+                    <div class="flex justify-center">
+                        <h2 class="text-xl font-medium">Mango</h2>
+                    </div>
+                </div>
+                <div>
+                    <img src="./images/fruit4.png" alt="fruit-img-1">
+                    <div class="flex justify-center">
+                        <h2 class="text-xl font-medium">Strawberry</h2>
+                    </div>
+                </div>
+                <div>
+                    <img src="./images/fruit5.png" alt="fruit-img-1">
+                    <div class="flex justify-center">
+                        <h2 class="text-xl font-medium">Pomegranate</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="banner_overlay absolute text-center space-y-2 md:space-y-8">
+                <h1 class="text-2xl md:text-6xl font-extrabold text-white">
+                    Exotic tastes at your
+                    <br>
+                    doorstep
+                </h1>
+                <p class="text-white opacity-80 ">
+                    We supply highly quality organic products
+                </p>
+                <button class="text-xl font-extrabold text-white bg-[#F85559] py-3 px-5 rounded-lg cursor-pointer">Shop
+                    Now</button>
+            </div>
+        </section>
+    </header>
+
+
+    <main></main>
+    <footer></footer>
 </body>
+
 </html>
