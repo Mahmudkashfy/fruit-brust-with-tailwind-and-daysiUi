@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width, initial-scale=1.0">
@@ -19,33 +18,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            transition: all linear 0.4s;
-        }
-
-        .teem_overlay::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.70);
-        }
-
-        .banner_img::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.70);
-            z-index: -10;
-        }
+        * {transition: all linear 0.4s;}
+        .teem_overlay::after {content: '';
+            position: absolute;width: 100%; height: 100%;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.70);}
+        .banner_img::after {content: '';position: absolute;width: 100%;height: 100%;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.70);z-index: -10;}
     </style>
 </head>
-
 <body>
     <header class="max-w-screen-xl mx-auto px-2 md:px-12 lg:px24">
         <!--============== Navigation section starts here ==============-->
@@ -438,8 +416,7 @@
         </section>
         <!--============== Teem section ends here ==============-->
     </main>
-    <footer
-        class="flex flex-col max-w-screen-xl mx-auto px-2 md:px-12 lg:px24 bg-[#121212] py-20 mt-24 text-center space-y-10">
+    <footer class="flex flex-col  bg-[#121212] py-20 mt-24 text-center space-y-10">
         <div class="flex justify-center items-center gap-2 ">
             <img class="w-10" src="./images/logo.png" alt="logo">
             <h3 class="text-white text-4xl font-bold">Fruit Burst</h3>
